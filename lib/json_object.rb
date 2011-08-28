@@ -4,7 +4,7 @@ require "active_support/core_ext/string"
 
 module JSONObject
   def self.json_to_object json = "", class_name = "object"
-    klass = class_name == "object" ? Object.new : class_name.constantize.classify.new
+    klass = class_name == "object" ? Object.new : Object.const_set(class_name.classify, Class.new).new
 
     unless json == ""
       json_obj = JSON.parse(json)
