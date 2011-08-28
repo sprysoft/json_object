@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = JSONObject::VERSION
   s.authors     = ["David White"]
   s.email       = ["david@spry-soft.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "http://www.spry-soft.com"
+  s.summary     = "A simple Ruby library for converting JSON objects into Ruby classes."
+  s.description = "A simple Ruby library for converting JSON objects into Ruby classes."
 
   s.rubyforge_project = "json_object"
 
