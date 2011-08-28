@@ -1,4 +1,4 @@
 source "http://rubygems.org"
 
-# Specify your gem's dependencies in json_object.gemspec
+# Gem's dependencies specified in json_object.gemspec
 gemspec
