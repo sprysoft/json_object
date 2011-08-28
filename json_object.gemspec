@@ -4,7 +4,7 @@ require "json_object/version"
 
 Gem::Specification.new do |s|
   s.name        = "json_object"
-  s.version     = JsonObject::VERSION
+  s.version     = JSONObject::VERSION
   s.authors     = ["David White"]
   s.email       = ["david@spry-soft.com"]
   s.homepage    = ""
@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_development_dependency "rspec"
+  s.add_runtime_dependency "json"
 end

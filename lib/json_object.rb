@@ -1,5 +1,7 @@
 require "json_object/version"
 
-module JsonObject
-  # Your code goes here...
+module JSONObject
+  def self.json_to_object json = ""
+    Object.new
+  end
 end
