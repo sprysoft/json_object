@@ -2,11 +2,7 @@ require 'json_object'
 
 describe JSONObject do
   context '#json_to_object' do
-    it 'should return Object class when no json is passed' do
-      object = JSONObject.json_to_object 
-      object.class.should == Object.new.class
-    end
-
+    
     context ' created with following JSON "{ "name" : "David" }"' do
       before :all do
         json = '{ "name" : "David" }'
@@ -41,7 +37,16 @@ describe JSONObject do
         person = Person.new        
         person.class.should == Person
       end
-    end
 
+      it "should allow me to create a new class that responds to first_name" do
+        person = Person.new
+        person.respond_to?(:first_name).should == true
+      end
+
+      it "should allow me to create a new class that responds to last_name" do
+        person = Person.new
+        person.respond_to?(:last_name).should == true
+      end
+    end
   end
 end
