@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    json_object (0.0.1)
+    json_object (0.0.2)
       activesupport
       i18n
       json
