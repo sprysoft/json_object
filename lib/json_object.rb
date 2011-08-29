@@ -3,7 +3,7 @@ require "json"
 require "active_support/core_ext/string"
 
 module JSONObject
-  def self.json_to_object json, class_name = "object"
+  def self.new json, class_name = "object"
     json_obj = JSON.parse(json)
     
     Object.const_set(class_name.classify, Class.new) unless class_name == "object"

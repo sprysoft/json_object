@@ -1,12 +1,12 @@
 require 'json_object'
 
 describe JSONObject do
-  context '#json_to_object' do
+  context '#new' do
     
     context ' created with following JSON "{ "name" : "David" }"' do
       before :all do
         json = '{ "name" : "David" }'
-        @object = JSONObject.json_to_object json
+        @object = JSONObject.new json
       end
 
       it 'should return Object class that responds to name method' do
@@ -26,7 +26,7 @@ describe JSONObject do
     context ' created with following JSON "{ "first_name" : "David", "last_name" : "White" }"' do
       before :all do
         json = '{ "first_name" : "David", "last_name" : "White" }'
-        @person = JSONObject.json_to_object json, "person"
+        @person = JSONObject.new json, "person"
       end
       
       it "should allow me to change the name of the class" do
